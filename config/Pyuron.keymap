@@ -14,13 +14,6 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
         paste_reserch: paste_reserch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -35,6 +28,13 @@
                 <&macro_press>;
 
             label = "PASTE_RESERCH";
+        };
+
+        pw_mac: pw_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N0 &kp N0 &kp N1 &kp N0 &kp N2 &kp ENTER>;
+            label = "PW_MAC";
         };
     };
 
@@ -84,28 +84,28 @@
 
         layer_3 {
             bindings = <
-&trans               &trans      &trans  &trans  &trans  &kp LC(UP_ARROW)        &kp LC(LEFT)    &kp UP_ARROW    &kp LC(RIGHT)       &kp LS(LC(SPACE))
-&trans               &trans      &trans  &trans  &trans  &kp LA(LG(LEFT_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp LA(LG(RIGHT_ARROW))
-&trans               &trans      &trans  &trans  &trans  &trans                  &trans          &kp C_PREV      &kp LG(LEFT_ARROW)  &kp LC(DOWN_ARROW)
-&kp LG(RIGHT_ARROW)  &kp C_NEXT  &trans  &trans  &trans  &trans                  &trans          &trans          &trans              &kp LG(DELETE)
+&trans               &trans      &trans  &trans  &trans  &kp LC(UP_ARROW)        &kp LC(LEFT)      &kp UP_ARROW    &kp LC(RIGHT)       &kp LS(LC(SPACE))
+&trans               &trans      &trans  &trans  &trans  &kp LA(LG(LEFT_ARROW))  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp LA(LG(RIGHT_ARROW))
+&trans               &trans      &trans  &trans  &trans  &trans                  &kp C_PLAY_PAUSE  &kp C_PREV      &kp LG(LEFT_ARROW)  &kp LC(DOWN_ARROW)
+&kp LG(RIGHT_ARROW)  &kp C_NEXT  &trans  &trans  &trans  &trans                  &trans            &trans          &trans              &kp LG(DELETE)
             >;
         };
 
         layer_4 {
             bindings = <
-&trans                &trans             &trans  &trans  &trans  &paste_reserch    &kp LG(W)         &kp LG(R)        &kp LG(T)             &kp LG(Y)
-&trans                &trans             &trans  &trans  &trans  &msc MOVE_Y(-20)  &kp LG(C)         &kp LG(V)        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP
-&trans                &trans             &trans  &trans  &trans  &trans            &kp C_PLAY_PAUSE  &msc MOVE_Y(20)  &kp LESS_THAN         &kp GREATER_THAN
-&kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans            &trans           &trans                &kp LG(DELETE)
+&trans                &trans             &trans  &trans  &trans  &paste_reserch    &kp LG(W)  &kp LG(R)        &kp LG(T)             &kp LG(Y)
+&trans                &trans             &trans  &trans  &trans  &msc MOVE_Y(-20)  &kp LG(C)  &kp LG(V)        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP
+&trans                &trans             &trans  &trans  &trans  &trans            &trans     &msc MOVE_Y(20)  &kp LESS_THAN         &kp GREATER_THAN
+&kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans     &trans           &kp LG(Q)             &kp LG(DELETE)
             >;
         };
 
         layer_5 {
             bindings = <
-&trans          &trans      &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans          &trans      &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
-&trans          &trans      &trans  &trans  &trans  &trans        &bootloader   &trans        &trans        &trans
-&bt BT_CLR_ALL  &bt BT_CLR  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans         &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans         &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans        &kp LG(LC(Q))  &pw_mac       &trans
             >;
         };
     };
