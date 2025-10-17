@@ -87,7 +87,7 @@
 &trans               &trans      &trans  &trans  &trans  &kp LC(UP_ARROW)        &kp LC(LEFT)    &kp UP_ARROW    &kp LC(RIGHT)       &kp LS(LC(SPACE))
 &trans               &trans      &trans  &trans  &trans  &kp LA(LG(LEFT_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp LA(LG(RIGHT_ARROW))
 &trans               &trans      &trans  &trans  &trans  &trans                  &trans          &kp C_PREV      &kp LG(LEFT_ARROW)  &kp LC(DOWN_ARROW)
-&kp LG(RIGHT_ARROW)  &kp C_NEXT  &trans  &trans  &trans  &trans                  &trans          &trans          &trans              &kp LG(DELETE)
+&kp LG(RIGHT_ARROW)  &kp C_NEXT  &trans  &trans  &trans  &trans                  &trans          &trans          &trans              &kp LG(BACKSPACE)
             >;
         };
 
@@ -96,7 +96,7 @@
 &trans                &trans             &trans  &trans  &trans  &paste_reserch    &kp LG(W)         &kp LG(R)        &kp LG(T)             &kp LG(Y)
 &trans                &trans             &trans  &trans  &trans  &msc MOVE_Y(-20)  &kp LG(C)         &kp LG(V)        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP
 &trans                &trans             &trans  &trans  &trans  &trans            &kp C_PLAY_PAUSE  &msc MOVE_Y(20)  &kp LESS_THAN         &kp GREATER_THAN
-&kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans            &trans           &trans                &trans
+&kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans            &trans           &trans                &kp LG(BACKSPACE)
             >;
         };
 
