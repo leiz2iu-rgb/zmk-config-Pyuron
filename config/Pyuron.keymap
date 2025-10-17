@@ -30,21 +30,9 @@
             label = "PASTE_RESERCH";
         };
     };
-
-    lt_to_layer_0: lt_to_layer_0 {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LAYER_TAP_TO_0";
-        bindings = <&mo>, <&to_layer_0>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-    };
 };
 
 / {
-    behaviors {
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
