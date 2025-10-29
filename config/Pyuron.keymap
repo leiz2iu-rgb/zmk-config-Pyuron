@@ -40,22 +40,14 @@
         pw_plus: pw_plus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp P &kp L &kp U &kp S &kp N1 &kp N0 &kp N2 &kp N0>,
-                <&macro_press>,
-                <&kp RETURN>;
-
+            bindings = <&kp P &kp L &kp U &kp S &kp N1 &kp N0 &kp N2 &kp N0 &kp RETURN>;
             label = "PW_PLUS";
         };
 
         pw_apple: pw_apple {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none &kp R &kp LS(I) &kp N1 &kp H &kp N &kp A &kp G &kp T &kp O &kp E>,
-                <&macro_press>,
-                <&kp RETURN>;
-
+            bindings = <&kp R &kp LS(I) &kp N1 &kp H &kp N &kp A &kp G &kp T &kp O &kp E &kp RETURN>;
             label = "PW_APPLE";
         };
     };
