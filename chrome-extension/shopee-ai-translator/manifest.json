@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Shopee AI Translator",
+  "description": "Translate Shopee chat messages with AI and send speech-recognised replies.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.shopee.*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.shopee.sg/*",
+        "https://*.shopee.co.id/*",
+        "https://*.shopee.tw/*",
+        "https://*.shopee.co.th/*",
+        "https://*.shopee.com.my/*",
+        "https://*.shopee.vn/*",
+        "https://*.shopee.ph/*",
+        "https://*.shopee.cn/*",
+        "https://*.shopee.co.kr/*"
+      ],
+      "js": ["contentScript.js"],
+      "css": ["contentStyles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html"
+}

@@ -1,0 +1,74 @@
+.shopee-ai-translation {
+  margin-top: 4px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 3px solid #f57224;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+.shopee-ai-mic {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  margin-left: 8px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.shopee-ai-mic__icon {
+  font-size: 14px;
+}
+
+.shopee-ai-mic__label {
+  font-weight: 600;
+}
+
+.shopee-ai-mic:hover {
+  background: #fef3ea;
+  color: #f57224;
+}
+
+.shopee-ai-mic--listening {
+  background: #f57224;
+  color: #fff;
+  border-color: #f57224;
+}
+
+.shopee-ai-mic--error {
+  animation: shopee-ai-error 0.4s ease-in-out 0s 3;
+}
+
+.shopee-ai-mic--error::after {
+  content: attr(data-error);
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 10;
+  white-space: nowrap;
+  background: #f44336;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+@keyframes shopee-ai-error {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shopee AI Translator 設定</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="options">
+      <h1>Shopee AI Translator 設定</h1>
+      <p class="options__description">
+        Shopeeのチャット画面にAI翻訳を追加します。以下の設定を保存してから拡張機能を再読込してください。
+      </p>
+      <form id="options-form">
+        <section>
+          <h2>API設定</h2>
+          <label>
+            <span>APIベースURL</span>
+            <input type="text" name="apiBaseUrl" placeholder="https://api.openai.com" />
+          </label>
+          <label>
+            <span>モデル名</span>
+            <input type="text" name="model" placeholder="gpt-4o-mini" />
+          </label>
+          <label>
+            <span>APIキー</span>
+            <input type="password" name="apiKey" autocomplete="off" />
+          </label>
+        </section>
+
+        <section>
+          <h2>翻訳言語</h2>
+          <label>
+            <span>受信メッセージを翻訳する言語</span>
+            <input type="text" name="incomingLanguage" placeholder="ja" />
+          </label>
+          <label>
+            <span>こちらの発言を翻訳する相手言語</span>
+            <input type="text" name="outgoingLanguage" placeholder="en" />
+          </label>
+          <label>
+            <span>音声認識ロケール (例: ja-JP)</span>
+            <input type="text" name="speechRecognitionLocale" placeholder="ja-JP" />
+          </label>
+        </section>
+
+        <section>
+          <h2>プロンプト</h2>
+          <label>
+            <span>受信メッセージ翻訳プロンプト</span>
+            <textarea name="incomingPrompt" rows="3"></textarea>
+          </label>
+          <label>
+            <span>送信メッセージ翻訳プロンプト</span>
+            <textarea name="outgoingPrompt" rows="3"></textarea>
+          </label>
+        </section>
+
+        <section>
+          <h2>セレクタ調整 (任意)</h2>
+          <p class="options__hint">ShopeeのUI変更により要素が取得できない場合に調整してください。</p>
+          <label>
+            <span>メッセージリスト</span>
+            <input type="text" name="selectors.messageList" />
+          </label>
+          <label>
+            <span>受信メッセージ</span>
+            <input type="text" name="selectors.incomingMessage" />
+          </label>
+          <label>
+            <span>送信メッセージ</span>
+            <input type="text" name="selectors.outgoingMessage" />
+          </label>
+          <label>
+            <span>メッセージ本文</span>
+            <input type="text" name="selectors.messageText" />
+          </label>
+          <label>
+            <span>入力コンテナ</span>
+            <input type="text" name="selectors.inputContainer" />
+          </label>
+          <label>
+            <span>入力欄 (textarea/contenteditable)</span>
+            <input type="text" name="selectors.textarea" />
+          </label>
+        </section>
+
+        <div class="options__actions">
+          <button type="submit">保存</button>
+          <span id="status" role="status"></span>
+        </div>
+      </form>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

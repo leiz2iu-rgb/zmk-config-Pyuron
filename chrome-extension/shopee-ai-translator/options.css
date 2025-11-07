@@ -1,0 +1,115 @@
+:root {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  color: #1f1f1f;
+  background: #f5f6f8;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+}
+
+.options {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+}
+
+.options h1 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.options h2 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #f57224;
+}
+
+.options__description {
+  color: #555;
+  line-height: 1.6;
+}
+
+form {
+  display: grid;
+  gap: 24px;
+}
+
+section {
+  display: grid;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+}
+
+label span {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #f57224;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(245, 114, 36, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.options__hint {
+  margin-top: -8px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.options__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+button[type="submit"] {
+  background: #f57224;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background: #d95e1b;
+}
+
+#status {
+  font-size: 0.95rem;
+  color: #0f9d58;
+}
