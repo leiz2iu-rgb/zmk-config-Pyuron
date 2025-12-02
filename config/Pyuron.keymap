@@ -97,7 +97,7 @@
             bindings = <
 &trans                &trans             &trans  &trans  &trans  &paste_reserch    &kp LG(W)  &kp LG(R)        &kp LG(T)             &kp LG(Y)
 &trans                &trans             &trans  &trans  &trans  &msc MOVE_Y(-20)  &kp LG(C)  &kp LG(V)        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP
-&trans                &trans             &trans  &trans  &trans  &trans            &kp GLOBE  &msc MOVE_Y(20)  &kp LS(N)             &kp LG(LS(T))
+&trans                &trans             &trans  &trans  &trans  &trans            &kp GLOBE  &msc MOVE_Y(20)  &kp LS(LG(N))         &kp LG(LS(T))
 &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans     &trans           &kp LG(Q)             &kp LG(BACKSPACE)
             >;
         };
