@@ -77,10 +77,10 @@
 
         layer_2 {
             bindings = <
-&kp F1        &kp F2   &kp F3   &kp F4   &kp F5   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH     &none
+&kp F1        &kp F2   &kp F3   &kp F4   &kp F5   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH     &kp KP_EQUAL
 &kp F6        &kp F7   &kp F8   &kp F9   &kp F9   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK  &none
 &kp F11       &kp F12  &kp F13  &kp F14  &kp F15  &trans           &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&kp KP_MINUS  &trans   &trans   &trans   &trans   &trans           &kp PERIOD       &kp KP_NUMBER_0  &kp KP_PLUS      &kp LG(KP_EQUAL)
+&kp KP_MINUS  &trans   &trans   &trans   &trans   &trans           &kp PERIOD       &kp KP_NUMBER_0  &kp KP_PLUS      &none
             >;
         };
 
@@ -97,7 +97,7 @@
             bindings = <
 &trans                &trans             &trans  &trans  &trans  &paste_reserch    &kp LG(W)  &kp LG(R)        &kp LG(T)             &kp LG(Y)
 &trans                &trans             &trans  &trans  &trans  &msc MOVE_Y(-20)  &kp LG(C)  &kp LG(V)        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP
-&trans                &trans             &trans  &trans  &trans  &trans            &kp GLOBE  &msc MOVE_Y(20)  &kp LESS_THAN         &kp GREATER_THAN
+&trans                &trans             &trans  &trans  &trans  &trans            &kp GLOBE  &msc MOVE_Y(20)  &kp LS(N)             &kp LG(LS(T))
 &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans            &trans     &trans           &kp LG(Q)             &kp LG(BACKSPACE)
             >;
         };
